@@ -1,0 +1,33 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "twitter-bootstrap@3.3.7",
+      "destination": "wwwroot/contents/"
+    },
+    {
+      "library": "jquery@3.4.1",
+      "destination": "wwwroot/contents/"
+    },
+    {
+      "library": "bootstrap-datetimepicker@4.17.47",
+      "destination": "wwwroot/contents/"
+    },
+    {
+      "library": "moment.js@2.24.0",
+      "destination": "wwwroot/contents/"
+    },
+    {
+      "library": "jquery-validate@1.19.1",
+      "destination": "wwwroot/lib/jquery-validate/"
+    },
+    {
+      "library": "jquery-validation-unobtrusive@3.2.11",
+      "destination": "wwwroot/lib/jquery-validation-unobtrusive/"
+    }
+  ]
+
+
+
+}

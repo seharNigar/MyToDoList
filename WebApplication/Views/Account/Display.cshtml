@@ -1,0 +1,55 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model IEnumerable<Models.ToDoList>
+@{
+
+    ViewBag.Title = "Display";
+
+
+}
+<div class="topright">
+
+    <a asp-controller="User" asp-action="Logout" class="logouttext">Logout</a>
+
+</div>
+
+
+<div class="container">
+    <h3 style="text-align:center">Welcome to your ToDoList @ViewBag.name</h3>
+    <div class="signup-content">
+        <div class="signup-form">
+
+            <form method="POST" class="register-form" id="login-form" asp-controller="Account" asp-action="Display">
+                <table class="table">
+
+                    @foreach (var list in Model)
+                    {
+
+
+                        <tr>
+                            <td><input type="hidden" asp-for="@list.UserId" /></td>
+                            <td id="tdId">@list.Name</td>
+                            <td>@list.Duration</td>
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@list.Id" class="btn btn-lg"><i class="zmdi zmdi-edit"></i></a>
+
+
+                            </td>
+                            <td>
+                                <a asp-action="Delete" asp-route-id="@list.Id" class="btn btn-lg"><i class="zmdi zmdi-delete"></i></a>
+
+
+                            </td>
+                        </tr>
+                    }
+                </table>
+                <div class="form-group form-button">
+                    <input type="submit" class="form-submit" value="Add Task" />
+                </div>
+            </form>
+        </div>
+        <div class="signup-image">
+            <figure><img src="~/images/list.png" alt="sing up image"></figure>
+
+        </div>
+    </div>
+</div>

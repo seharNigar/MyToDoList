@@ -1,0 +1,54 @@
+﻿
+@model Models.ToDoList
+
+@{
+
+
+    ViewBag.Title = "Edit";
+
+
+}
+<div class="topright">
+
+    <a asp-controller="User" asp-action="Logout" class="logouttext">Logout</a>
+
+</div>
+
+<div class="container">
+    <div class="signup-content">
+        <div class="signup-form">
+            <h2 class="form-title">Edit Task</h2>
+            <form method="POST" asp-controller="Account" asp-action="Edit">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <input asp-for="UserId" type="hidden"    />   
+
+                <div class="form-group">
+                    <label asp-for="Name"><i class="zmdi zmdi-view-list"></i></label>
+                    <input type="text" asp-for="Name" id="name" placeholder="Enter Task" />
+                </div>
+
+
+
+                <div>
+                    <div class="input-group date">
+                        <div class="input-group-addon">
+                            <span class="zmdi zmdi-calendar-note"></span>
+                        </div>
+                        <input asp-for="Duration" type="text" id="txt_datepicker" class="form-control datetimepicker" />
+                        
+                    </div>
+                </div>
+
+
+                <div class="form-group form-button">
+                    <input type="submit" class="form-submit" value="Edit" />
+                </div>
+            </form>
+        </div>
+        <div class="signup-image">
+            <figure><img src="~/images/edit.png" alt="sing up image"></figure>
+
+        </div>
+
+    </div>
+</div>
